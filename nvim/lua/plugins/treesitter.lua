@@ -1,11 +1,11 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
 
     build = ":TSUpdate",
 
     config = function()
-        require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter.config").setup({
             ensure_installed = {
                 "c",
                 "c_sharp",

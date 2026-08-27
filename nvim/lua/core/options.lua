@@ -61,7 +61,10 @@ vim.opt.wildmenu = true
 
 -- Mouse / Clipboard
 vim.opt.mouse = "a"
-vim.opt.clipboard = { "unnamed", "unnamedplus" }
+--vim.opt.clipboard = { "unnamed", "unnamedplus" }
+--vim.opt.clipboard = { "unnamed" }
+--vim.opt.clipboard = { "unnamedplus" }
+vim.opt.clipboard = {}
 
 -- Netrw
 vim.g.netrw_banner = 0
