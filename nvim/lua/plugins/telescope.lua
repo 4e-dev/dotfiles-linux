@@ -1,39 +1,19 @@
 return {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
-
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-    },
-
+    dependencies = { "nvim-lua/plenary.nvim", },
     config = function()
-        local telescope = require("telescope")
-        local builtin = require("telescope.builtin")
 
+        local telescope = require("telescope")
         telescope.setup({})
 
-        vim.keymap.set("n", "<leader>ff", builtin.find_files, {
-            desc = "Find files",
-        })
+        local builtin = require("telescope.builtin")
+        vim.keymap.set("n", "<leader>ff", builtin.find_files)   -- find via file name
+        vim.keymap.set("n", "<leader>fg", builtin.live_grep)    -- find via grep
+        vim.keymap.set("n", "<leader>fb", builtin.buffers)      -- find via active buffers
+        vim.keymap.set("n", "<leader>fh", builtin.help_tags)    -- find help
+        vim.keymap.set("n", "<leader>fr", builtin.oldfiles)     -- recent files
+        vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols) -- document symbols
 
-        vim.keymap.set("n", "<leader>fg", builtin.live_grep, {
-            desc = "Live grep",
-        })
-
-        vim.keymap.set("n", "<leader>fb", builtin.buffers, {
-            desc = "Find buffers",
-        })
-
-        vim.keymap.set("n", "<leader>fh", builtin.help_tags, {
-            desc = "Find help",
-        })
-
-        vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {
-            desc = "Recent files",
-        })
-
-        vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, {
-            desc = "Document symbols",
-        })
     end,
 }
