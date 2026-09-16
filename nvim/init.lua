@@ -1,3 +1,5 @@
-require("core.options")
-require("core.keymaps")
-require("config.lazy")
+require("lazy.lazy")
+require("config.autocmds")
+require("config.keymaps")
+require("config.netrw")
+require("config.settings")
