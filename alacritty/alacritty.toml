@@ -1,12 +1,17 @@
+[general]
+import = ["themes/base16_default_dark.toml"]
+
 [cursor]
 style = {shape = "Block"}
 
 [font]
 size = 20
+normal = {family="JetBrainsMono Nerd Font", style="regular"}
 
 [mouse]
 hide_when_typing = true
 
 [window]
 dimensions = {columns = 120, lines = 35}
-opacity = 0.95
+opacity = 1.00
+dynamic_title=false
