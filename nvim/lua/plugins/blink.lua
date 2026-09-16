@@ -6,7 +6,10 @@ return {
     version = "1.*",
     opts = {
         keymap = {
-            preset = "super-tab",
+            preset = "none",
+            ['<Tab>'] = {'select_next', 'fallback'},
+            ['<S-Tab>'] = {'select_prev', 'fallback'},
+            ['<CR>'] = {'accept', 'fallback'}
         },
         appearance = {
             nerd_font_variant = "mono",
