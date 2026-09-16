@@ -2,13 +2,9 @@ call plug#begin()
 " reminder:
     " PlugInstall
     " PlugUpdate
-    Plug 'junegunn/goyo.vim'
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
 call plug#end()
-
-" automatically enable goyo
-autocmd VimEnter * Goyo 100
 
 let mapleader = " "
 set nocompatible
@@ -19,14 +15,14 @@ set encoding=utf-8 " encoding
 
 " show line numbers
 set number
-autocmd VimEnter * set relativenumber
-autocmd VimEnter * set ruler
+set relativenumber
+set ruler
 
 " indentation
 set expandtab      " convert tabs (\t) to spaces
 set tabstop=4      " \t will appear as 4 spaces wide
-set shiftwidth=4   " number of spaces when using shifting (<, >)
 set softtabstop=4  " tab in insert mode is the same as 4 spaces
+set shiftwidth=4   " number of spaces when using shifting (<, >)
 set shiftround     " round indents to multiple of 'shiftwidth'
 
 " auto-indentation and formatting
@@ -58,7 +54,7 @@ set wildmenu " command-line completion
 
 " colorscheme
 set background=dark
-colorscheme solarized
+colorscheme dogrun
 
 " mouse
 set mouse=a
@@ -66,17 +62,12 @@ set mouse=a
 " clipboard
 set clipboard=unnamed,unnamedplus " copy to system clipboard
 
-" another way to quit (quitting all buffers is to handle closing Goyo)
-nnoremap <leader>d :w<CR>
-nnoremap <leader>q :wqa<CR>
-nnoremap ZZ :wqa<CR>
-
 " copy workaround for wayland
 xnoremap "+y y:call system("wl-copy", @")<CR>
 nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>p
 
 " netrw hotkey
-nnoremap <leader>f :Ex<CR>
+nnoremap <leader>ef :Ex<CR>
 
 " removes trailing white spaces
 nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
