@@ -2,16 +2,16 @@
 import = ["themes/base16_default_dark.toml"]
 
 [cursor]
-style = {shape = "Block"}
+style = {shape = "Beam", blinking = "On"}
 
 [font]
-size = 16
-normal = {family="FiraCode Nerd Font Mono", style="regular"}
+size = 14
+normal = {family="0xProto", style="regular"}
 
 [mouse]
 hide_when_typing = true
 
 [window]
 dimensions = {columns = 120, lines = 35}
+dynamic_title=true
 opacity = 1.00
-dynamic_title=false
