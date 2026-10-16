@@ -7,12 +7,10 @@ return {
         -- add language servers here
         vim.lsp.config("clangd", { capabilities = capabilities })
         vim.lsp.config("glsl_analyzer", { capabilities = capabilities })
-        vim.lsp.config("lua-language-server", { capabilities = capabilities })
 
         vim.lsp.enable({
             "clangd",
             "glsl_analyzer",
-            "lua-language-server",
         })
 
         -- lsp keymaps
