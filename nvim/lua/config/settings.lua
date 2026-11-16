@@ -12,9 +12,8 @@ vim.opt.scrolloff = 2
 vim.opt.wrap = false
 
 -- colors
---vim.opt.background = "dark"
 vim.opt.termguicolors = true
---vim.cmd("colorscheme quiet")
+vim.cmd("colorscheme monochrome")
 
 -- indentation
 vim.opt.expandtab = true
